@@ -8,11 +8,11 @@ import models, schemas
 # Create tables (if they don’t exist)
 models.Base.metadata.create_all(bind=engine)
 
-app = FastAPI(title="Sales Inventory API - FastAPI Version")
+app = FastAPI(title="Product Inventory API - FastAPI Version")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  
+    allow_origins=["http://localhost:5173"],  
     allow_credentials=True,
     allow_methods=["*"],  # GET, POST, PUT, DELETE
     allow_headers=["*"],
