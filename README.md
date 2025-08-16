@@ -6,19 +6,19 @@ This is a FastAPI backend for managing a product inventory, including basic CRUD
 
 ## Table of Contents
 
-* [Setup](#setup)
-* [Environment Variables](#environment-variables)
-* [Database](#database)
-* [API Endpoints](#api-endpoints)
-* [Running the Server](#running-the-server)
-* [CORS Configuration](#cors-configuration)
+- [Setup](#setup)
+- [Environment Variables](#environment-variables)
+- [Database](#database)
+- [API Endpoints](#api-endpoints)
+- [Running the Server](#running-the-server)
+- [CORS Configuration](#cors-configuration)
 
 ## Setup
 
 1. Clone the repository:
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/Cema2019/product-inventory-backend.git
 cd product-inventory-BE
 ```
 
@@ -50,9 +50,9 @@ PORT=your_port_here
 
 The backend uses SQLAlchemy with a MySQL database.
 
-* `db.py` sets up the connection.
-* `models.py` defines the `Sale` table.
-* Tables are automatically created on server start if they do not exist.
+- `db.py` sets up the connection.
+- `models.py` defines the `Sale` table.
+- Tables are automatically created on server start if they do not exist.
 
 ## API Endpoints
 
@@ -137,5 +137,3 @@ app.add_middleware(
 Adjust `allow_origins` to match your frontend deployment URL.
 
 ---
-
-**Note:** Make sure to keep your `.env` file secret and do not commit it to version control.
