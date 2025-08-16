@@ -10,7 +10,8 @@ class SaleCreate(SaleBase):
 
 class SaleResponse(SaleBase):
     id: int
-    total: float
+    TOTAL: float = Field(..., alias="TOTAL")
 
     class Config:
         orm_mode = True
+        allow_population_by_field_name = True
