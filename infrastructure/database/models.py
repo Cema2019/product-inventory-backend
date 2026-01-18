@@ -1,7 +1,9 @@
-from sqlalchemy import Column, Integer, String, Float
-from db import Base
+from sqlalchemy import Column, Float, Integer, String
 
-class Sale(Base):
+from infrastructure.database.connection import Base
+
+
+class SaleModel(Base):
     __tablename__ = 'sales'
 
     id = Column(Integer, primary_key=True, index=True)
