@@ -15,6 +15,14 @@ This is a FastAPI backend for managing a product inventory, including basic CRUD
 
 ## Setup
 
+### Prerequisites
+
+- Python 3.9+
+- pip
+- MySQL
+
+### Installation
+
 1. Clone the repository:
 
 ```bash
@@ -22,16 +30,39 @@ git clone https://github.com/Cema2019/product-inventory-backend.git
 cd product-inventory-BE
 ```
 
-2. Install dependencies:
+2. Create and activate a virtual environment:
 
-```bash
+**macOS / Linux**
+```
+python3 -m venv venv
+source venv/bin/activate
+```
+
+**Windows (PowerShell)**
+
+```
+python -m venv venv
+venv\Scripts\activate
+```
+
+3. Install dependencies:
+
+```
 pip install -r requirements.txt
 ```
 
-3. Copy the `.env.example` file to `.env` and fill in your configuration:
+4. Copy the .env.example file to .env and fill in your configuration:
 
-```bash
+```
 cp .env.example .env
+```
+
+### Deactivating the virtual environment
+
+When you finish working on the project:
+
+```
+deactivate
 ```
 
 ## Environment Variables
@@ -134,6 +165,6 @@ app.add_middleware(
 )
 ```
 
-Adjust `allow_origins` to match your frontend deployment URL.
+`allow_origins` will be eventually adjusted to match the frontend deployment URL.
 
 ---
