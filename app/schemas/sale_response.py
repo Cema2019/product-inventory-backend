@@ -1,12 +1,6 @@
-from pydantic import BaseModel, Field
+from pydantic import Field
+from app.schemas.sale_base import SaleBase
 
-class SaleBase(BaseModel):
-    name: str = Field(min_length=1)
-    price: float
-    delivery: float
-
-class SaleCreate(SaleBase):
-    pass
 
 class SaleResponse(SaleBase):
     id: int
